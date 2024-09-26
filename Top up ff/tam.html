@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tam.css">
+    <title>Top Up Game</title>
+</head>
+<body>
+    <header>
+        <h1>Top Up Game</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+ 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="topup">
+            <h2>Masukkan Detail Top Up</h2>
+            <div class="topup-form">
+                <form action="#" method="POST" onsubmit="submitForm(event)">
+                    <label for="game">Pilih Game:</label>
+                    <select id="game" name="game" required>
+                        <option value="mobile_legends">Mobile Legends</option>
+                
+                        <!-- Tambahkan lebih banyak pilihan game sesuai kebutuhan -->
+                    </select>
+
+                    <label for="amount">Jumlah Top Up:</label>
+                    <input type="number" id="amount" name="amount" min="10000" step="10000" required>
+
+                    <label for="userId">ID Pengguna:</label>
+                    <input type="text" id="userId" name="userId" required>
+
+                    <button type="submit">Proses Top Up</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Top Up Game. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Mencegah pengiriman formulir default
+            const game = document.getElementById('game').value;
+            const amount = document.getElementById('amount').value;
+            const userId = document.getElementById('userId').value;
+
+            // Lakukan proses untuk transaksi, misalnya menampilkan detail
+            console.log(`Game: ${game}, Jumlah: ${amount}, ID Pengguna: ${userId}`);
+
+            // Alihkan ke halaman transaksi atau tampilkan detail
+            // showTransactionDetails(game, amount, userId);
+        }
+    </script>
+</body>
+</html>
